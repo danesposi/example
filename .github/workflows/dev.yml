@@ -1,0 +1,27 @@
+name: test-deploy
+
+on:
+  push:
+    branches: [ develop ]
+
+env:
+  POLYGON_URL: ${{ secrets.MAINNET_URL }}
+  MUMBAI_URL: ${{ secrets.TESTNET_URL }}
+  MNEMONIC: ${{ secrets.MNEMONIC }}
+
+jobs:
+  test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.1.0
+    - name: INSTALL DEPENDENCIES
+      run: |
+        npm install
+      continue-on-error: false
+    - name: TEST CODE
+      run: | 
+        npx hardhat test
+      continue-on-error: false
+    - name: DEPLOY
+      run: |
+        npx hardhat deploy --network mainnet 
