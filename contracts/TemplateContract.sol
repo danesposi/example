@@ -10,7 +10,7 @@ contract HokenContract {
         // some code.
     }
 
-    function feature() external {
+    function myFeature() external {
         // some code.
     }
 
