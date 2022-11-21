@@ -1,13 +1,11 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity >= 0.8.9;
 
-contract HokenContract {
+
+// FEATURE 1: Cambiar TemplateContract -> FeatureContract (CHECK :) ). 
+
+contract FeatureContract {
 
     constructor() {}
-
-
-    function createMarketPlace() external {
-        // some code.
-    }
 
 }
