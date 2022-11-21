@@ -6,6 +6,10 @@ pragma solidity >= 0.8.9;
 
 contract SuperFeatureContract {
 
-    constructor() {}
+    address myOwner;
+
+    constructor(address _owner) {
+        myOwner = _owner;
+    }
 
 }
